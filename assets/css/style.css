@@ -46,6 +46,7 @@ main {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-direction: row;
 }
 
 .circle-image {
@@ -53,6 +54,14 @@ main {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* For smaller screens, ensure the layout remains responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* Experience section */
