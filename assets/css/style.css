@@ -58,6 +58,9 @@ main {
 
 .about-text {
     flex: 1; /* Ensures the text takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the text with the top of the image */
 }
 
 /* For smaller screens, ensure the layout remains responsive */
