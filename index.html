@@ -4,24 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike McGovern</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Sr. Machine Learning Engineer</h1>
-    <p>I am a Sr. Machine Learning Engineer at Boston Scientific. My work focuses on applying deep learning to medical device processes and products.</p>
-    <h2>Experience</h2>
-    <ul>
-        <li>Boston Scientific
+    <header>
+        <h1>Mike McGovern</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <div class="about-container">
+                <img src="assets/img/headshot.png" alt="Headshot" class="circle-image">
+                <p>I am a Sr. Machine Learning Engineer at Boston Scientific. My work focuses on applying deep learning to medical device processes and products.</p>
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
             <ul>
-                <li>Sr. Machine Learning Engineer</li>
-                <li>Sr. Electrical Engineer</li>
-                <li>Electrical Engineer II</li>
-                <li>Electrical Engineer I</li>
+                <li>Boston Scientific
+                    <ul>
+                        <li>Sr. Machine Learning Engineer</li>
+                        <li>Sr. Electrical Engineer</li>
+                        <li>Electrical Engineer II</li>
+                        <li>Electrical Engineer I</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-    </ul>
-    <h2>Education</h2>
-    <p>Biomedical Engineering, M.S. & B.S.</p>
-    <img src="assets/img/headshot.png" alt="Headshot" class="circle-image">
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>Biomedical Engineering, M.S. & B.S.</p>
+        </section>
+    </main>
+    <footer id="contact">
+        <p>Connect with me on <a href="#">LinkedIn</a> or <a href="#">GitHub</a>.</p>
+    </footer>
 </body>
 </html>
