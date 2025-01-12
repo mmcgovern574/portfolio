@@ -56,6 +56,10 @@ main {
     object-fit: cover;
 }
 
+.about-text {
+    flex: 1; /* Ensures the text takes up the remaining space */
+}
+
 /* For smaller screens, ensure the layout remains responsive */
 @media (max-width: 768px) {
     .about-container {
