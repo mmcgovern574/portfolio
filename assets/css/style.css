@@ -17,13 +17,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 10%; /* Add dynamic padding to center the content */
     background-color: #2c2f33;
     color: #fff;
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
-header h1 {
-    font-size: 1.8rem;
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-right: 20px; /* Add space between the name and the navigation links */
 }
 
 header nav a {
@@ -44,41 +52,65 @@ main {
 /* About section */
 .about-container {
     display: flex;
-    align-items: center;
-    gap: 20px;
     flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 10%; /* Add dynamic padding to center the content */
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .circle-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.image-and-icons {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: row; /* Ensure icons are always in a row layout */
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 2rem; /* Increase the size of the icons */
+    color: #1b2229; /* Change the color of the icons */
+
 }
 
 .about-text {
-    margin-top: 20px; /* Adjust the value as needed */
+    padding-top: 40px;
     flex: 1; /* Ensures the text takes up the remaining space */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Aligns the text with the top of the image */
+    padding-left: 80px; /* Add padding to the left of the text */
 }
 
 /* For smaller screens, ensure the layout remains responsive */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        padding: 0 20px; /* Adjust padding for smaller screens */
     }
-}
 
-/* Experience section */
-ul {
-    list-style: none;
-}
-
-ul ul {
-    margin-left: 20px;
+    .social-icons {
+        flex-direction: row;
+    }
 }
 
 /* Footer */
