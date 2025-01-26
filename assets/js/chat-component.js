@@ -14,8 +14,8 @@ const Chat = () => {
       setLoading(true);
   
       try {
-        // Replace with your actual API endpoint
-        const response = await fetch('/api/chat', {
+        // Replace YOUR_SPACE_NAME with your actual HuggingFace space name
+        const response = await fetch('https://YOUR_SPACE_NAME.hf.space/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ message: input }),
