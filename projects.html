@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mike McGovern</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles for projects page */
+        .projects-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c2f33;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .project-links a {
+            padding: 8px 15px;
+            background: #2c2f33;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background: #3d4144;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <span class="name">Mike McGovern</span>
+            </div>
+            <nav>
+                <a href="index.html#about">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="music.html">Music</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="projects-container">
+            <h1>My Projects</h1>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Chatbot Project" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">AI Chatbot</h2>
+                        <p class="project-description">A custom chatbot built using DeepSeek and Hugging Face, designed to assist with philosophical discussions and information processing.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mmcgovern574" target="_blank">View Code</a>
+                            <a href="#" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Research Project" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">Medical Research Analysis</h2>
+                        <p class="project-description">Applied deep learning techniques to analyze medical research data, focusing on perception and information processing patterns.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mmcgovern574" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Music Production" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">Music Production Tools</h2>
+                        <p class="project-description">Development of custom audio processing tools and plugins for music production, incorporating principles of perception and cognition.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mmcgovern574" target="_blank">View Code</a>
+                            <a href="#" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
