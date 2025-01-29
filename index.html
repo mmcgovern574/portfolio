@@ -13,6 +13,11 @@
             <div class="header-left">
                 <span class="name">Mike McGovern</span>
             </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
             <nav>
                 <a href="#about">About</a>
                 <a href="projects.html">Projects</a>
@@ -21,6 +26,32 @@
             </nav>
         </div>
     </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+        
+            navToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!nav.contains(e.target) && !navToggle.contains(e.target) && nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                }
+            });
+        
+            // Close menu when clicking a link
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+            });
+        });
+        </script>
+
     <main>
         <section id="about">
             <div class="about-container">
