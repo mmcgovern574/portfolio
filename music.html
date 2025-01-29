@@ -43,17 +43,65 @@
             animation-play-state: paused;
         }
 
-        .music-container {
-            max-width: 1200px;
+        .music-container,
+        .soundcloud-container {
+            width: 90%;
+            max-width: 900px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0;
         }
 
-        .soundcloud-container {
-            width: 100%;
+        .about-container {
+            width: 70%;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0;
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1rem;
+            text-align: center;
+        }
+
+        .image-and-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .circle-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            font-size: 2.5rem;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #666;
+        }
+
+        .about-text {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .soundcloud-player {
@@ -72,6 +120,33 @@
             text-align: center;
             margin-bottom: 2rem;
             font-size: 1.8rem;
+        }
+
+        .artist-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        @media (min-width: 1000px) {
+            .about-container {
+                flex-direction: row;
+                text-align: left;
+                gap: 2rem;
+            }
+
+            .image-and-icons {
+                margin-bottom: 0;
+            }
+
+            .about-text {
+                flex: 1;
+            }
+
+            .artist-name {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
@@ -94,33 +169,24 @@
             </nav>
         </div>
     </header>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const nav = document.querySelector('nav');
-        
-            navToggle.addEventListener('click', function() {
-                nav.classList.toggle('active');
-            });
-        
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!nav.contains(e.target) && !navToggle.contains(e.target) && nav.classList.contains('active')) {
-                    nav.classList.remove('active');
-                }
-            });
-        
-            // Close menu when clicking a link
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('active');
-                });
-            });
-        });
-        </script>
 
     <main>
+        <section class="about-container">
+            <div class="image-and-icons">
+                <img src="assets/img/CrushedKeyz.png" alt="Headshot" class="circle-image">
+                <div class="social-icons">
+                    <a href="https://open.spotify.com/artist/4EKU2vzcVEkD5CnepmepDk" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
+                    <a href="https://music.apple.com/us/artist/crushed-keyz/1517941975" target="_blank" class="social-icon"><i class="fab fa-apple"></i></a>
+                    <a href="https://soundcloud.com/crushedkeyz" target="_blank" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+                    <a href="https://www.instagram.com/crushed_keyz/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2 class="artist-name">CrUSheD kEYz</h2>
+                <p>I am a music producer exploring a wide range of genres, including hip-hop, trap, R&B, reggaeton, and tropical house. Under my artist name, CrUSheD kEYz, I blend my roots in piano with a passion for electronic music production. Over the years, I've collaborated with artists from around the world and have attended studio sessions in LA and Toronto, where I've had the privilege of working alongside industry producers and artists.</p>
+            </div>
+        </section>
+
         <div class="soundcloud-container">
             <h2 class="section-title">My Music</h2>
             <iframe class="soundcloud-player"
@@ -154,5 +220,30 @@
             </div>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+        
+            navToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!nav.contains(e.target) && !navToggle.contains(e.target) && nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                }
+            });
+        
+            // Close menu when clicking a link
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
