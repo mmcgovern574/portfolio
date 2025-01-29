@@ -20,24 +20,22 @@
             position: absolute;
             display: flex;
             animation: scroll 160s linear infinite;
-            width: 600%;
-            height: 1000%;
-            transform: scale(0.7);
+            width: max-content;
             transform-origin: top left;
         }
 
         .instagram-frame {
-            width: 50%;
-            height: 143%;
+            width: 4000px;
+            height: 1000px;
             flex-shrink: 0;
         }
 
         @keyframes scroll {
             0% {
-                transform: translateX(0) scale(0.7);
+                transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-50%)) scale(0.7);
+                transform: translateX(calc(-50%));
             }
         }
 
