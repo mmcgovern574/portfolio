@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mike McGovern</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles for blog page */
+        .blog-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+            color: #2c2f33;
+            margin-bottom: 10px;
+        }
+
+        .blog-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .blog-post {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .blog-post-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .blog-post-title {
+            font-size: 1.8rem;
+            color: #2c2f33;
+            margin-bottom: 8px;
+        }
+
+        .blog-post-meta {
+            color: #666;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .blog-post-content {
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .blog-post-content h2 {
+            color: #2c2f33;
+            margin: 25px 0 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .blog-post-content h3 {
+            color: #2c2f33;
+            margin: 20px 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 15px;
+        }
+
+        .blog-post-content ul, .blog-post-content ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .blog-post-content li {
+            margin-bottom: 5px;
+        }
+
+        .blog-post-content blockquote {
+            border-left: 4px solid #2c2f33;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .read-more {
+            color: #2c2f33;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #3d4144;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            color: #2c2f33;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .tag:hover {
+            background: #e0e0e0;
+        }
+
+        .coming-soon {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .coming-soon i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2c2f33;
+        }
+
+        @media (max-width: 768px) {
+            .blog-container {
+                padding: 0 15px;
+            }
+            
+            .blog-post {
+                padding: 20px;
+            }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-post-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <span class="name">Mike McGovern</span>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <a href="index.html#about">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="music.html">Music</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+        
+            navToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            document.addEventListener('click', function(e) {
+                if (!nav.contains(e.target) && !navToggle.contains(e.target) && nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                }
+            });
+        
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+    <main>
+        <div class="blog-container">
+            <div class="blog-header">
+                <h1>My Thoughts</h1>
+                <p>Exploring philosophy, perception, technology, and the intersection of human creativity with artificial intelligence.</p>
+            </div>
+
+            <!-- Sample Blog Post -->
+            <article class="blog-post">
+                <div class="blog-post-header">
+                    <h2 class="blog-post-title">Welcome to My Blog</h2>
+                    <div class="blog-post-meta">
+                        <span><i class="fas fa-calendar-alt"></i> January 2024</span>
+                        <span><i class="fas fa-clock"></i> 3 min read</span>
+                        <div style="margin-left: auto;">
+                            <a href="#" class="tag">philosophy</a>
+                            <a href="#" class="tag">technology</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post-content">
+                    <p>Welcome to my corner of the internet where I share thoughts on the fascinating intersections between philosophy, perception, and information processing. As someone deeply engaged in both the technical and creative worlds, I find myself constantly reflecting on how we understand and interact with reality.</p>
+                    
+                    <p>Through my work in medical research, deep learning, and music production, I've come to appreciate how different forms of intelligence—both human and artificial—process and create meaning from information. This blog will be a space to explore these ideas and share insights from my journey.</p>
+                    
+                    <h3>What You Can Expect</h3>
+                    <ul>
+                        <li>Reflections on the nature of perception and consciousness</li>
+                        <li>Insights from working with AI and machine learning</li>
+                        <li>The philosophy behind creative expression in music and technology</li>
+                        <li>Personal experiences from research and artistic collaborations</li>
+                    </ul>
+                    
+                    <p>I believe that the most interesting questions arise at the boundaries between disciplines. How does the way we perceive sound relate to how neural networks process audio? What can music production teach us about creativity and information theory? How do our philosophical assumptions shape the technology we build?</p>
+                    
+                    <blockquote>
+                        "The real question is not whether machines think but whether men do." - B.F. Skinner
+                    </blockquote>
+                    
+                    <p>I hope this space becomes a platform for meaningful dialogue about these questions. Feel free to reach out if any of these topics resonate with you—I'm always eager to connect with others who share these curiosities.</p>
+                </div>
+            </article>
+
+            <!-- Coming Soon Message -->
+            <div class="coming-soon">
+                <i class="fas fa-pen-nib"></i>
+                <h3>More Posts Coming Soon</h3>
+                <p>I'm excited to share more thoughts and insights. Check back regularly for new posts on philosophy, technology, and creativity.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
